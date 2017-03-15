@@ -6,8 +6,8 @@
     "start": "react-native start"
   },
   "dependencies": {
-    "react": "15.2.1",
-    "react-native": "0.31.0",
-    "react-native-navigation": "2.0.0-experimental.116"
+    "react-native": "0.42.0",
+    "react": "15.4.2",
+    "react-native-navigation": "next"
   }
 }
