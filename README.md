@@ -2,12 +2,12 @@
 
 ## Bootstrap for a vanilla `react-native-navigation` based project
 
-Clone this repository to start a project based on 
+Clone this repository to start a project based on
 
 ```
-react@15.4.2
-react-native@0.42.0
-react-native-navigation@next
+"react-native": "0.44.2",
+"react": "16.0.0-alpha.6",
+"react-native-navigation": "1.x.x"
 ```
 
 
