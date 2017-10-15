@@ -20,16 +20,7 @@ Download npm dependencies:
 
 ```sh
 npm install
--or-
-yarn
 ```
-
-##### You would need to setup gradle to automatically download android dependencies
-```sh
-./scripts/android_licenses.sh
-```
-
-
 
 ### Running your project
 
