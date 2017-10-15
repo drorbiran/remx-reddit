@@ -19,6 +19,7 @@ Check `react-native-navigation`'s [documentation](https://github.com/wix/react-n
 Download npm dependencies:
 
 ```sh
+npm i -g react-native-cli
 npm install
 ```
 
