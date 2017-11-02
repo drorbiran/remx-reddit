@@ -1,6 +1,6 @@
-# react-native-navigation-bootstrap
+# remx-rnn-uilib-bootstrap
 
-## Bootstrap for a vanilla `react-native-navigation` based project
+## Bootstrap for a `remx` `react-native-navigation` and `ui-lib` based project
 
 Clone this repository to start a project based on
 
@@ -11,7 +11,11 @@ Clone this repository to start a project based on
 ```
 
 
-Check `react-native-navigation`'s [documentation](https://github.com/wix/react-native-navigation/wiki) for usage details.
+Check the following libraries for usage details:
+
+* [remx](https://github.com/wix/remx)
+* [react-native-navigation](https://github.com/wix/react-native-navigation/wiki)
+* [react-native-navigation](https://github.com/wix/react-native-ui-lib)
 
 
 ### preparing your project
