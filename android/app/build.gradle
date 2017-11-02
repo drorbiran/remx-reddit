@@ -24,7 +24,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        applicationId "com.react_native_navigation_bootstrap"
+        applicationId "com.remxrnnuilibbootstrap"
         minSdkVersion 17
         targetSdkVersion 22
         versionCode 1

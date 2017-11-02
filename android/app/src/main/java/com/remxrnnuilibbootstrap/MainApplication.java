@@ -1,4 +1,4 @@
-package com.react_native_navigation_bootstrap;
+package com.remxrnnuilibbootstrap;
 
 import android.support.annotation.NonNull;
 
