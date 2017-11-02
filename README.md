@@ -15,7 +15,7 @@ Check the following libraries for usage details:
 
 * [remx](https://github.com/wix/remx)
 * [react-native-navigation](https://github.com/wix/react-native-navigation/wiki)
-* [react-native-navigation](https://github.com/wix/react-native-ui-lib)
+* [react-native-ui-lib](https://github.com/wix/react-native-ui-lib)
 
 
 ### preparing your project
