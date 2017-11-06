@@ -15,7 +15,7 @@ export function getTopics() {
             ]   
 }
 
-export function getPosts(){
+export function getPosts(url){
     return [
             { 
                 url: "https://www.reddit.com/r/Jokes/comments/7b4d2i/a_teenage_boy_was_delivering_papers_to_an/",

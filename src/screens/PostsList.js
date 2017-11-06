@@ -10,22 +10,39 @@ import * as actions from '../stores/posts/postsActions';
 class PostsList extends PureComponent {
 
   componentWillMount() {
-    actions.fetchPosts();
-  }
-
-  _renderLoader() {
-    const isLoading = this.props.isLoading;
-    if (isLoading) {
-      return <LoaderScreen
-          loaderColor = {Colors.blue30}
-          message = "Loading Posts"
-        />
-    }
+    const url = this.props.url;
+    actions.fetchPosts(`https://www.reddit.com${url}hot.json`);
   }
 
   _renderPostsList() {
-    return <Text>{JSON.stringify(this.props.posts)}</Text>
+    const { isLoading, posts } = this.props;
+    if(!isLoading) {
+      return (   
+          <FlatList
+              data={posts}
+              keyExtractor={this._keyExtractor}
+              renderItem={this._renderItem}
+          />             
+      );
+    }
   }
+
+  _keyExtractor = (item) => item.url;
+
+  _renderItem = ({item}) => {
+    return (
+      <Text>{JSON.stringify(item)}</Text>    
+    )
+  }
+
+  _renderLoader() {
+    if (this.props.isLoading) {
+        return <LoaderScreen
+            loaderColor={Colors.blue30}
+            message="Loading Posts"
+        />
+    }
+}
     
   render() {
         return (
