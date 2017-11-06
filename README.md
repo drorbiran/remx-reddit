@@ -2,7 +2,7 @@
 
 ## An example project for learning remx react-native-navigation and react-native-ui-lib
 
-###TBD###
+### TBD
 
 View the following [blog post](TBD) for a step by step tutorial of creating this project.
 
