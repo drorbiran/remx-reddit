@@ -21,16 +21,27 @@ class TopicsList extends PureComponent {
             />
         }
     }
+
+    _keyExtractor = (item) => item.url;
+    
+    _renderItem = ({item}) => {
+        return (
+            <TouchableOpacity>
+                <Text>
+                    {item.title}
+                </Text>
+            </TouchableOpacity>
+        )
+    };
  
     renderList= () => {        
         if(!this.props.isLoading) {
-            console.log('renderlist');        
             return (   
-                <View>
-                    <Text>
-                        {JSON.stringify(this.props.topics)}
-                    </Text>
-                </View>               
+                <FlatList
+                    data={this.props.topics}
+                    keyExtractor={this._keyExtractor}
+                    renderItem={this._renderItem}
+                />             
             );
         }
     }
