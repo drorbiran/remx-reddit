@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import {FlatList, TouchableOpacity} from 'react-native';
-import {View, Text, Button} from 'react-native-ui-lib'
+import {Colors, View, Text, Button, LoaderScreen} from 'react-native-ui-lib'
 import { connect } from 'remx';
 
 import * as store from '../stores/topics/topicsStore';
@@ -15,7 +15,10 @@ class TopicsList extends PureComponent {
     renderLoader() {
         if (this.props.isLoading) {
             console.log('render loader');
-            return <Text>Loading</Text>
+            return <LoaderScreen
+                loaderColor={Colors.blue30}
+                message="Loading Topics"
+            />
         }
     }
  
@@ -24,15 +27,9 @@ class TopicsList extends PureComponent {
             console.log('renderlist');        
             return (   
                 <View>
-                    <Text blue50 text20 center>Welcome</Text>
                     <Text>
                         {JSON.stringify(this.props.topics)}
                     </Text>
-                    <View center marginT-100>
-                        <Button text70 white label="Push Screen"
-                        onPress={this.pushScreen.bind(this)}
-                        />
-                    </View>
                 </View>               
             );
         }
@@ -48,7 +45,7 @@ class TopicsList extends PureComponent {
 
     render() {
         return (
-            <View flex paddingH-25 paddingT-120>
+            <View flex>
                 {this.renderLoader()}
                 {this.renderList()}
             </View>

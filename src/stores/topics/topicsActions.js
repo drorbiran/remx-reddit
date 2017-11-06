@@ -13,6 +13,5 @@ export function fetchTopics() {
         store.setters.setTopics(topics);
         console.log(topics);
         setLoading(false);
-    }, 2000);
-    
+    }, 2000);   
 }
