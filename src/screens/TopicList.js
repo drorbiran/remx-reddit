@@ -29,7 +29,7 @@ class TopicsList extends PureComponent {
             <Card
                 row
                 containerStyle={{marginTop: 12}}
-                onPress={() => console.log(item.url)}
+                onPress={() => this._showPostsScreen(item)}
             >
                 <Card.Image
                     imageSource={{uri: item.icon_img}}
@@ -46,7 +46,17 @@ class TopicsList extends PureComponent {
             </Card>
         )
     };
- 
+
+    _showPostsScreen = (topic) => {
+        console.log("topic: ", topic);
+        const {title,url} = topic;
+        this.props.navigator.push({
+            screen: 'remxReddit.PostsList',
+            title: title,
+            passProps: {url}
+        })
+    };
+
     renderList= () => {        
         if(!this.props.isLoading) {
             return (   

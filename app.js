@@ -12,7 +12,7 @@ registerScreens();
 
 Navigation.startSingleScreenApp({
   screen: {
-    screen: 'bootstrap.TopicList',
+    screen: 'remxReddit.TopicList',
     title: 'remx Reddit'
   }
 });

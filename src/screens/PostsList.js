@@ -6,12 +6,13 @@ import {View, Text} from 'react-native';
 // import * as actions from '../stores/topics/topicsActions';
 
 
-class Screen1 extends PureComponent {
-    render() {
+class PostsList extends PureComponent {
+    
+  render() {
         return (
             <View style={styles.container}>
             <Text style={styles.instructions}>
-              Screen1
+              {this.props.url}
             </Text>
           </View>
         );
@@ -32,4 +33,4 @@ const styles ={
     },
   };
 
-export default Screen1;
+export default PostsList;
