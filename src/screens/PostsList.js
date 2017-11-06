@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
-import { FlatList } from 'react-native';
-import { Text, Colors, View, LoaderScreen } from 'react-native-ui-lib'
+import { FlatList, Linking } from 'react-native';
+import { Text, Colors, View, LoaderScreen, Card } from 'react-native-ui-lib'
 import { connect } from 'remx';
 
 import * as store from '../stores/posts/postsStore';
@@ -31,7 +31,21 @@ class PostsList extends PureComponent {
 
   _renderItem = ({item}) => {
     return (
-      <Text>{JSON.stringify(item)}</Text>    
+      <Card
+        containerStyle={{marginTop: 12}}
+        onPress={() => Linking.openURL(item.url)}
+      >
+        <Card.Section body>
+            <Card.Item>
+                <Text text70>{item.title}</Text>
+            </Card.Item>
+        </Card.Section> 
+        <Card.Section body>
+          <Card.Item>
+                  <Text text100>Score: {item.score}</Text>
+          </Card.Item>     
+        </Card.Section>
+  </Card>    
     )
   }
 

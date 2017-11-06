@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import {FlatList, TouchableOpacity} from 'react-native';
-import {Colors, View, Text, Button, Card, CardSection, CardItem, CardImage, LoaderScreen, ListItem} from 'react-native-ui-lib'
+import {Colors, View, Text, Button, Card, LoaderScreen, ListItem} from 'react-native-ui-lib'
 import { connect } from 'remx';
 
 import * as store from '../stores/topics/topicsStore';
