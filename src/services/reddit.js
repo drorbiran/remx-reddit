@@ -14,3 +14,18 @@ export function getTopics() {
                 }
             ]   
 }
+
+export function getPosts(){
+    return [
+            { 
+                url: "https://www.reddit.com/r/Jokes/comments/7b4d2i/a_teenage_boy_was_delivering_papers_to_an/",
+                title: "A teenage boy was delivering papers to an apartment house.",
+                score: 12716
+            },
+            {
+                url: "https://www.reddit.com/r/Jokes/comments/7b1fe6/i_told_a_girl_you_look_great_without_glasses/",
+                title: "I told a girl you look great without glasses",
+                score: 11259
+            }
+    ]
+}
