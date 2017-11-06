@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import {FlatList, TouchableOpacity} from 'react-native';
-import {Colors, View, Text, Button, LoaderScreen} from 'react-native-ui-lib'
+import {Colors, View, Text, Button, Card, CardSection, CardItem, CardImage, LoaderScreen, ListItem} from 'react-native-ui-lib'
 import { connect } from 'remx';
 
 import * as store from '../stores/topics/topicsStore';
@@ -26,11 +26,24 @@ class TopicsList extends PureComponent {
     
     _renderItem = ({item}) => {
         return (
-            <TouchableOpacity>
-                <Text>
-                    {item.title}
-                </Text>
-            </TouchableOpacity>
+            <Card
+                row
+                containerStyle={{marginTop: 12}}
+                onPress={() => console.log(item.url)}
+            >
+                <Card.Image
+                    imageSource={{uri: item.icon_img}}
+                    width="30%"
+                />
+                <Card.Section body>
+                    <Card.Item>
+                        <Text text50>{item.title}</Text>
+                    </Card.Item>
+                    <Card.Item>
+                        <Text text90>{item.description}</Text>
+                    </Card.Item>
+                </Card.Section>      
+            </Card>
         )
     };
  
