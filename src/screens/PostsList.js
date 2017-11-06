@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
-import {View, Text} from 'react-native';
+import { FlatList } from 'react-native';
+import { Text, Colors, View, LoaderScreen } from 'react-native-ui-lib'
 import { connect } from 'remx';
 
 import * as store from '../stores/posts/postsStore';
@@ -11,13 +12,26 @@ class PostsList extends PureComponent {
   componentWillMount() {
     actions.fetchPosts();
   }
+
+  _renderLoader() {
+    const isLoading = this.props.isLoading;
+    if (isLoading) {
+      return <LoaderScreen
+          loaderColor = {Colors.blue30}
+          message = "Loading Posts"
+        />
+    }
+  }
+
+  _renderPostsList() {
+    return <Text>{JSON.stringify(this.props.posts)}</Text>
+  }
     
   render() {
         return (
-            <View style={styles.container}>
-            <Text style={styles.instructions}>
-              {JSON.stringify(this.props.posts)}
-            </Text>
+          <View flex>
+            {this._renderLoader()}
+            {this._renderPostsList()}  
           </View>
         );
     }
