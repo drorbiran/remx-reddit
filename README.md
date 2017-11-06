@@ -1,18 +1,11 @@
-# remx-rnn-uilib-bootstrap
+# Remx Reddit
 
-## Bootstrap for a `remx` `react-native-navigation` and `ui-lib` based project
+## An example project for learning remx react-native-navigation and react-native-ui-lib
 
-Clone this repository to start a project based on
+###TBD###
+View the following [blog post](TBD) for a step by step tutorial of creating this project.
 
-```
-"react-native": "0.44.2",
-"react": "16.0.0-alpha.6",
-"react-native-navigation": "1.x.x"
-```
-
-
-Check the following libraries for usage details:
-
+Check the following libraries for more details:
 * [remx](https://github.com/wix/remx)
 * [react-native-navigation](https://github.com/wix/react-native-navigation/wiki)
 * [react-native-ui-lib](https://github.com/wix/react-native-ui-lib)
