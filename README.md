@@ -3,6 +3,7 @@
 ## An example project for learning remx react-native-navigation and react-native-ui-lib
 
 ###TBD###
+
 View the following [blog post](TBD) for a step by step tutorial of creating this project.
 
 Check the following libraries for more details:
@@ -11,7 +12,7 @@ Check the following libraries for more details:
 * [react-native-ui-lib](https://github.com/wix/react-native-ui-lib)
 
 
-### preparing your project
+### preparing this project
 
 Download npm dependencies:
 
@@ -20,7 +21,7 @@ npm i -g react-native-cli
 npm install
 ```
 
-### Running your project
+### Running this project
 
 From project dir, run:
 
