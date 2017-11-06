@@ -1,4 +1,4 @@
-package com.remxrnnuilibbootstrap;
+package com.remxreddit;
 
 import com.reactnativenavigation.controllers.SplashActivity;
 

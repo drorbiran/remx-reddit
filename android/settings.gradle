@@ -1,4 +1,4 @@
-rootProject.name = 'remxRnnUiLibBootstrap'
+rootProject.name = 'remxReddit'
 
 include ':app'
 include ':react-native-navigation'
