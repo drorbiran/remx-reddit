@@ -37,10 +37,10 @@ class TopicsList extends PureComponent {
                 />
                 <Card.Section body>
                     <Card.Item>
-                        <Text text50>{item.title}</Text>
+                        <Text text50 red10>{item.title}</Text>
                     </Card.Item>
                     <Card.Item>
-                        <Text text90>{item.description}</Text>
+                        <Text text70>{item.description}</Text>
                     </Card.Item>
                 </Card.Section>      
             </Card>

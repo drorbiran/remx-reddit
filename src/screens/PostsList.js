@@ -37,12 +37,12 @@ class PostsList extends PureComponent {
       >
         <Card.Section body>
             <Card.Item>
-                <Text text70>{item.title}</Text>
+                <Text text50>{item.title}</Text>
             </Card.Item>
         </Card.Section> 
         <Card.Section body>
           <Card.Item>
-                  <Text text100>Score: {item.score}</Text>
+                  <Text text70>Score: {item.score}</Text>
           </Card.Item>     
         </Card.Section>
   </Card>    
