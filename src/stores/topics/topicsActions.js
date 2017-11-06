@@ -13,6 +13,6 @@ export function fetchTopics() {
         store.setters.setTopics(topics);
         console.log(topics);
         setLoading(false);
-    }, 1000);
+    }, 2000);
     
 }
