@@ -20,14 +20,14 @@ class TopicsList extends PureComponent {
         />
     }
 
-    _keyExtractor = (item) => item.url;
+    keyExtractor = (item) => item.url;
     
-    _renderItem = ({item}) => {
+    renderItem = ({item}) => {
         return (
             <Card
                 row
                 containerStyle={{margin: 12}}
-                onPress={() => this._showPostsScreen(item)}
+                onPress={() => this.showPostsScreen(item)}
             >
                 <Card.Image
                     imageSource={{uri: item.icon_img}}
@@ -38,16 +38,16 @@ class TopicsList extends PureComponent {
                         <Text text50 red10>{item.title}</Text>
                     </Card.Item>
                     <Card.Item>
-                        <Text text70>{this._trimText(item.description)}</Text>
+                        <Text text70>{this.trimText(item.description)}</Text>
                     </Card.Item>
                 </Card.Section>      
             </Card>
         )
     };
 
-    _trimText = (text) => (text.length > 60)? text.substring(0, 60) + "..." : text
+    trimText = (text) => (text.length > 60)? text.substring(0, 60) + "..." : text
 
-    _showPostsScreen = (topic) => {
+    showPostsScreen = (topic) => {
         console.log("topic: ", topic);
         const {title,url} = topic;
         this.props.navigator.push({
@@ -61,8 +61,8 @@ class TopicsList extends PureComponent {
         return (   
             <FlatList
                 data={this.props.topics}
-                keyExtractor={this._keyExtractor}
-                renderItem={this._renderItem}
+                keyExtractor={this.keyExtractor}
+                renderItem={this.renderItem}
             />             
         );
     }

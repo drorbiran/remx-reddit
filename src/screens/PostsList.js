@@ -19,15 +19,15 @@ class PostsList extends PureComponent {
     return (   
         <FlatList
             data={posts}
-            keyExtractor={this._keyExtractor}
-            renderItem={this._renderItem}
+            keyExtractor={this.keyExtractor}
+            renderItem={this.renderItem}
         />             
     );
   }
 
-  _keyExtractor = (item) => item.url;
+  keyExtractor = (item) => item.url;
 
-  _renderItem = ({item}) => {
+  renderItem = ({item}) => {
     return (
       <Card
         containerStyle={{marginTop: 12}}
