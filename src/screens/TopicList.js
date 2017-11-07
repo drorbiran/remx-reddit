@@ -13,13 +13,11 @@ class TopicsList extends PureComponent {
     }
 
     renderLoader() {
-        if (this.props.isLoading) {
-            console.log('render loader');
-            return <LoaderScreen
-                loaderColor={Colors.blue30}
-                message="Loading Topics"
-            />
-        }
+        console.log('render loader');
+        return <LoaderScreen
+            loaderColor={Colors.blue30}
+            message="Loading Topics"
+        />
     }
 
     _keyExtractor = (item) => item.url;
@@ -60,15 +58,13 @@ class TopicsList extends PureComponent {
     };
 
     renderList= () => {        
-        if(!this.props.isLoading) {
-            return (   
-                <FlatList
-                    data={this.props.topics}
-                    keyExtractor={this._keyExtractor}
-                    renderItem={this._renderItem}
-                />             
-            );
-        }
+        return (   
+            <FlatList
+                data={this.props.topics}
+                keyExtractor={this._keyExtractor}
+                renderItem={this._renderItem}
+            />             
+        );
     }
 
     pushScreen = () => {
@@ -82,8 +78,10 @@ class TopicsList extends PureComponent {
     render() {
         return (
             <View flex>
-                {this.renderLoader()}
-                {this.renderList()}
+                {(this.props.isLoading)?
+                    this.renderLoader() :
+                    this.renderList()
+                }
             </View>
         );
     }

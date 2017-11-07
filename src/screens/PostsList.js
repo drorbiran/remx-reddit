@@ -14,17 +14,15 @@ class PostsList extends PureComponent {
     actions.fetchPosts(`https://www.reddit.com${url}hot.json`);
   }
 
-  _renderPostsList() {
+  renderPostsList() {
     const { isLoading, posts } = this.props;
-    if(!isLoading) {
-      return (   
-          <FlatList
-              data={posts}
-              keyExtractor={this._keyExtractor}
-              renderItem={this._renderItem}
-          />             
-      );
-    }
+    return (   
+        <FlatList
+            data={posts}
+            keyExtractor={this._keyExtractor}
+            renderItem={this._renderItem}
+        />             
+    );
   }
 
   _keyExtractor = (item) => item.url;
@@ -49,20 +47,20 @@ class PostsList extends PureComponent {
     )
   }
 
-  _renderLoader() {
-    if (this.props.isLoading) {
-        return <LoaderScreen
-            loaderColor={Colors.blue30}
-            message="Loading Posts"
-        />
-    }
+  renderLoader() {
+    return <LoaderScreen
+        loaderColor={Colors.blue30}
+        message="Loading Posts"
+    />
 }
     
   render() {
         return (
           <View flex>
-            {this._renderLoader()}
-            {this._renderPostsList()}  
+            {(this.props.isLoading)?
+              this.renderLoader() :
+              this.renderPostsList()
+            }
           </View>
         );
     }

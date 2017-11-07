@@ -24,6 +24,7 @@ function _parseTopics(subreddits) {
 
 export async function getPosts(topicUrl) {
     console.log('getting posts');
+    console.log(topicUrl);
     const postsRes = await fetch(topicUrl);
     const postsData = await postsRes.json();
     const postsAllData = _.get(postsData,'data.children');
