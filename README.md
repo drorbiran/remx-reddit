@@ -1,6 +1,6 @@
 # Remx Reddit
 
-## An example project for learning remx react-native-navigation and react-native-ui-lib
+## An example project for learning remx combined with react-native-navigation and react-native-ui-lib
 
 ### TBD
 
