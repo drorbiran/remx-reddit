@@ -33,19 +33,21 @@ class TopicsList extends PureComponent {
             >
                 <Card.Image
                     imageSource={{uri: item.icon_img}}
-                    width="30%"
+                    width={96}
                 />
                 <Card.Section body>
                     <Card.Item>
                         <Text text50 red10>{item.title}</Text>
                     </Card.Item>
                     <Card.Item>
-                        <Text text70>{item.description}</Text>
+                        <Text text90>{this._trimText(item.description)}</Text>
                     </Card.Item>
                 </Card.Section>      
             </Card>
         )
     };
+
+    _trimText = (text) => (text.length > 60)? text.substring(0, 60) + "..." : text
 
     _showPostsScreen = (topic) => {
         console.log("topic: ", topic);
