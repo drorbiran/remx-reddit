@@ -2,9 +2,7 @@
 
 ## An example project for learning remx combined with react-native-navigation and react-native-ui-lib
 
-### TBD
-
-View the following [blog post](TBD) for a step by step tutorial of creating this project.
+View the following [blog post](https://medium.com/@drorbiran/getting-started-with-remx-a5880563566f) (WIP) for a step by step tutorial of creating this project.
 
 Check the following libraries for more details:
 * [remx](https://github.com/wix/remx)
