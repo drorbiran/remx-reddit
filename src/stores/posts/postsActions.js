@@ -6,11 +6,9 @@ export function setLoading(isLoading) {
     store.setters.setLoading(isLoading);
 }
 
-export function fetchPosts() {
+export async function fetchPosts(topicUrl) {
     setLoading(true);
-    setTimeout(function() {
-        const posts = redditService.getPosts();
-        store.setters.setPosts(posts);
-        setLoading(false);
-    }, 2000);   
+    const posts = await redditService.getPosts(topicUrl);
+    store.setters.setPosts(posts);
+    setLoading(false);
 }

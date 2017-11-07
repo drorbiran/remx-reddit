@@ -28,7 +28,7 @@ class TopicsList extends PureComponent {
         return (
             <Card
                 row
-                containerStyle={{marginTop: 12}}
+                containerStyle={{margin: 12}}
                 onPress={() => this._showPostsScreen(item)}
             >
                 <Card.Image
@@ -40,7 +40,7 @@ class TopicsList extends PureComponent {
                         <Text text50 red10>{item.title}</Text>
                     </Card.Item>
                     <Card.Item>
-                        <Text text90>{this._trimText(item.description)}</Text>
+                        <Text text70>{this._trimText(item.description)}</Text>
                     </Card.Item>
                 </Card.Section>      
             </Card>

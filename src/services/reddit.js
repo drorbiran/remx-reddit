@@ -5,7 +5,7 @@ export async function getTopics() {
     const url = "https://www.reddit.com/subreddits/default.json"
     const subredditsRes = await fetch(url);
     const subredditsData = await subredditsRes.json();
-    const subreddits = _.get(subredditsData,'data.children');
+    const subreddits = subredditsData.data.children;
     const topics = _parseTopics(subreddits);
     console.log(topics);
     return topics
@@ -22,17 +22,22 @@ function _parseTopics(subreddits) {
     });
 }
 
-export function getPosts(url){
-    return [
-            { 
-                url: "https://www.reddit.com/r/Jokes/comments/7b4d2i/a_teenage_boy_was_delivering_papers_to_an/",
-                title: "A teenage boy was delivering papers to an apartment house.",
-                score: 12716
-            },
-            {
-                url: "https://www.reddit.com/r/Jokes/comments/7b1fe6/i_told_a_girl_you_look_great_without_glasses/",
-                title: "I told a girl you look great without glasses",
-                score: 11259
-            }
-    ]
+export async function getPosts(topicUrl) {
+    console.log('getting posts');
+    const postsRes = await fetch(topicUrl);
+    const postsData = await postsRes.json();
+    const postsAllData = _.get(postsData,'data.children');
+    const posts = _parsePosts(postsAllData);
+    console.log(posts);   
+    return posts;
+}
+
+function _parsePosts(postsAllData){
+    return postsAllData.map(({data}) => {
+        return {
+            url: data.url,
+            title: data.title,
+            score: data.score
+        }
+    })
 }
