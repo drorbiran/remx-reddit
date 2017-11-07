@@ -11,7 +11,7 @@ class PostsList extends PureComponent {
 
   componentWillMount() {
     const url = this.props.url;
-    actions.fetchPosts(`https://www.reddit.com${url}hot.json`);
+    actions.fetchPosts(url);
   }
 
   renderPostsList() {
@@ -52,7 +52,7 @@ class PostsList extends PureComponent {
         loaderColor={Colors.blue30}
         message="Loading Posts"
     />
-}
+  }
     
   render() {
         return (

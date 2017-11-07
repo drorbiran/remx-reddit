@@ -22,8 +22,9 @@ function _parseTopics(subreddits) {
     });
 }
 
-export async function getPosts(topicUrl) {
+export async function getPosts(url) {
     console.log('getting posts');
+    const topicUrl = `https://www.reddit.com${url}hot.json`
     console.log(topicUrl);
     const postsRes = await fetch(topicUrl);
     const postsData = await postsRes.json();
