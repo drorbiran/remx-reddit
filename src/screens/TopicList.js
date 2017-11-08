@@ -13,7 +13,6 @@ class TopicsList extends PureComponent {
     }
 
     renderLoader() {
-        console.log('render loader');
         return <LoaderScreen
             loaderColor={Colors.blue30}
             message="Loading Topics"
@@ -48,7 +47,6 @@ class TopicsList extends PureComponent {
     trimText = (text) => (text.length > 60)? text.substring(0, 60) + "..." : text
 
     showPostsScreen = (topic) => {
-        console.log("topic: ", topic);
         const {title,url} = topic;
         this.props.navigator.push({
             screen: 'remxReddit.PostsList',

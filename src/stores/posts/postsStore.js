@@ -47,10 +47,7 @@ export const setters = remx.setters({
 
     setPosts(posts){
       state.posts = posts;
-    },
-
-    setLoading(isLoading) {
-        state.loading = isLoading;
-    },
+      state.loading = false;
+    }
 
 });

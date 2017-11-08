@@ -49,10 +49,7 @@ export const setters = remx.setters({
 
     setTopics(topics){
       state.topics = topics;
-    },
-
-    setLoading(isLoading) {
-        state.loading = isLoading;
-    },
+      state.loading = false;
+    }
 
 });
