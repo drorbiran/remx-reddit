@@ -6,6 +6,8 @@ import {
   View
 } from 'react-native';
 import {Navigation} from 'react-native-navigation';
+import {registerLoggerForDebug} from 'remx'
+registerLoggerForDebug(console.log);
 
 import {registerScreens} from './src/screens';
 registerScreens();
